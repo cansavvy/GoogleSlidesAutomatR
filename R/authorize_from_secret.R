@@ -1,3 +1,16 @@
+#' Authorize from access token
+#'
+#' Get authorization from access token
+#'
+#' @param access_token
+#'
+#' @return factor
+#' @export
+#' @examples
+#' token <- rgoogleslides::authorize()
+#' token <- token$credentials$access_token
+#' rgoogleslides::authorize(authorize_from_secret(token))
+#'
 authorize_from_secret <- function(access_token) {
 
   client_id <- getOption("slides.client.id")
